@@ -102,7 +102,7 @@ export default function PricingPage() {
               className={cn(
                 "relative rounded-full px-4 py-2 text-sm font-medium transition-colors",
                 billingCycle === "monthly" 
-                  ? "text-white font-semibold" 
+                  ? "text-primary-foreground" 
                   : "text-foreground hover:text-primary"
               )}
               onClick={() => setBillingCycle("monthly")}
@@ -110,7 +110,7 @@ export default function PricingPage() {
               Monthly
               {billingCycle === "monthly" && (
                 <motion.div
-                  className="absolute inset-0 rounded-full bg-primary shadow-sm"
+                  className="absolute inset-0 rounded-full bg-primary/90 border border-primary shadow-sm"
                   layoutId="billingCycle"
                   initial={false}
                   transition={{ duration: 0.2 }}
@@ -122,7 +122,7 @@ export default function PricingPage() {
               className={cn(
                 "relative rounded-full px-4 py-2 text-sm font-medium transition-colors",
                 billingCycle === "yearly" 
-                  ? "text-white font-semibold" 
+                  ? "text-primary-foreground" 
                   : "text-foreground hover:text-primary"
               )}
               onClick={() => setBillingCycle("yearly")}
@@ -130,7 +130,7 @@ export default function PricingPage() {
               Yearly
               {billingCycle === "yearly" && (
                 <motion.div
-                  className="absolute inset-0 rounded-full bg-primary shadow-sm"
+                  className="absolute inset-0 rounded-full bg-primary/90 border border-primary shadow-sm"
                   layoutId="billingCycle"
                   initial={false}
                   transition={{ duration: 0.2 }}
